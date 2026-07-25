@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZS Private Limited | Innovating Today. Empowering Tomorrow.</title>
+    <meta name="description" content="Custom software development, AI solutions, cloud technologies, automation testing, DevOps, IoT, and digital transformation services.">
+    
+    <!-- Google Fonts & Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#0B132B', 900: '#0B0F19', 950: '#05070E' },
+                        royal: { 500: '#2563EB', 600: '#1D4ED8' },
+                        gold: { 400: '#FBBF24', 500: '#F59E0B' },
+                        emerald: { 500: '#10B981' }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.3);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FFF 0%, #FBBF24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-blue {
+            background: linear-gradient(135deg, #60A5FA 0%, #2563EB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-royal {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 5s ease-in-out 2s infinite; }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-royal-600 selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass border-b border-slate-800/50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <img src="logo.jpeg" alt="ZS Private Limited Logo" class="h-10 w-auto bg-white p-1 rounded-md">
+                <div class="hidden sm:block">
+                    <span class="text-xl font-extrabold tracking-wider text-white block leading-none">ZS</span>
+                    <span class="text-[10px] tracking-widest text-slate-400 uppercase">Private Limited</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#internships" class="hover:text-blue-400 transition-colors">Internships</a>
+                <a href="#testimonials" class="hover:text-blue-400 transition-colors">Testimonials</a>
+                <a href="#faq" class="hover:text-blue-400 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-royal-600 hover:bg-royal-500 rounded-lg transition-all duration-300 shadow-lg shadow-royal-600/30 hover:scale-105">
+                    Inquire Now
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden glass border-b border-slate-800 px-6 py-6 space-y-4 text-center">
+            <a href="#home" class="block text-slate-300 hover:text-white py-2">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-white py-2">About</a>
+            <a href="#services" class="block text-slate-300 hover:text-white py-2">Services</a>
+            <a href="#projects" class="block text-slate-300 hover:text-white py-2">Projects</a>
+            <a href="#internships" class="block text-slate-300 hover:text-white py-2">Internships</a>
+            <a href="#testimonials" class="block text-slate-300 hover:text-white py-2">Testimonials</a>
+            <a href="#faq" class="block text-slate-300 hover:text-white py-2">FAQ</a>
+            <a href="#contact" class="block text-slate-300 hover:text-white py-2">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background Ambient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-royal-600/20 rounded-full blur-[140px] -z-10"></div>
+        <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[120px] -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-blue-500/30 text-xs font-semibold text-blue-300 uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        Transforming Ideas into Digital Excellence
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                        Build Powerful Digital Solutions That <span class="text-gradient-blue">Drive Business Growth</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        We help startups, businesses, educational institutes, and enterprises build modern websites, mobile applications, AI solutions, cloud infrastructure, automation systems, and digital products that scale.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#contact" class="px-7 py-4 text-sm font-bold text-white bg-royal-600 hover:bg-royal-500 rounded-xl shadow-xl shadow-royal-600/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
+                            Get Started <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="px-7 py-4 text-sm font-bold text-slate-200 glass hover:bg-white/10 rounded-xl transition-all duration-300 hover:-translate-y-1">
+                            Request Quote
+                        </a>
+                        <a href="#internships" class="px-7 py-4 text-sm font-bold text-gold-400 glass border-gold-500/30 hover:bg-gold-500/10 rounded-xl transition-all duration-300 hover:-translate-y-1">
+                            Apply for Internship
+                        </a>
+                        <a href="#contact" class="px-7 py-4 text-sm font-bold text-emerald-400 glass border-emerald-500/30 hover:bg-emerald-500/10 rounded-xl transition-all duration-300 hover:-translate-y-1">
+                            Book Free Consultation
+                        </a>
+                    </div>
+
+                    <!-- Achievements Strip -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <p class="text-3xl font-extrabold text-white counter" data-target="50">0</p>
+                            <p class="text-xs text-slate-400 font-medium">Projects Delivered</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-white counter" data-target="25">0</p>
+                            <p class="text-xs text-slate-400 font-medium">Happy Clients</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-white counter" data-target="15">0</p>
+                            <p class="text-xs text-slate-400 font-medium">Tech Domains</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-white counter" data-target="100">0</p>
+                            <p class="text-xs text-slate-400 font-medium">Students Trained</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Vector Visual -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <!-- Floating Tech Icons -->
+                        <div class="absolute -top-6 -left-6 glass p-3 rounded-2xl shadow-xl animate-float z-20 flex items-center gap-3 border border-blue-500/30">
+                            <i data-lucide="code" class="w-6 h-6 text-blue-400"></i>
+                            <span class="text-xs font-semibold text-slate-200">Full-Stack Engineering</span>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 glass p-3 rounded-2xl shadow-xl animate-float-delayed z-20 flex items-center gap-3 border border-purple-500/30">
+                            <i data-lucide="cpu" class="w-6 h-6 text-purple-400"></i>
+                            <span class="text-xs font-semibold text-slate-200">AI & Cloud Automation</span>
+                        </div>
+
+                        <!-- Developer Illustration Container -->
+                        <div class="glass-card rounded-3xl p-8 border border-slate-700/50 shadow-2xl relative overflow-hidden">
+                            <svg class="w-full h-auto text-blue-500/20" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="500" height="400" rx="20" fill="#0F172A"/>
+                                <path d="M50 350L150 250L250 300L450 100" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
+                                <circle cx="450" cy="100" r="12" fill="#FBBF24"/>
+                                <rect x="80" y="80" width="340" height="180" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+                                <circle cx="100" cy="100" r="6" fill="#EF4444"/>
+                                <circle cx="120" cy="100" r="6" fill="#F59E0B"/>
+                                <circle cx="140" cy="100" r="6" fill="#10B981"/>
+                                <rect x="100" y="120" width="120" height="8" rx="4" fill="#3B82F6"/>
+                                <rect x="100" y="140" width="200" height="8" rx="4" fill="#475569"/>
+                                <rect x="100" y="160" width="160" height="8" rx="4" fill="#475569"/>
+                                <rect x="100" y="180" width="240" height="8" rx="4" fill="#10B981"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-navy-900/60 relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Who We Are</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Engineering Enterprise Excellence & Future Talent</h3>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-300 leading-relaxed text-base">
+                    <p>
+                        <strong class="text-white">ZS Private Limited</strong> is a premier technology solutions firm dedicated to building high-performance software for startups, enterprises, and educational institutions.
+                    </p>
+                    <p>
+                        We specialize in end-to-end custom software development, AI solutions, cloud architecture, automation testing, DevOps, IoT, and comprehensive digital transformation strategies.
+                    </p>
+                    <p>
+                        Our dual-mission framework delivers cost-effective, scalable technology solutions for enterprise growth while cultivating industry-ready software engineers through rigorous hands-on internships and live project execution.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-blue-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-4">
+                            <i data-lucide="eye" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Our Vision</h4>
+                        <p class="text-sm text-slate-400">To become India's most trusted technology partner for businesses seeking innovation and students aspiring for technical leadership.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-purple-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Our Mission</h4>
+                        <ul class="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+                            <li>Deliver quality software</li>
+                            <li>Empower future engineers</li>
+                            <li>Provide innovative digital solutions</li>
+                            <li>Build long-term relationships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Our Core Services</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Full-Spectrum Technology Capabilities</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-600/10 text-blue-400 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i data-lucide="globe" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Web & Custom Software</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">High-performance frontend, backend, microservices, and bespoke software tailored to business needs.</p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">React</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Next.js</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Spring Boot</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-600/10 text-purple-400 flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                        <i data-lucide="bot" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">AI & Generative Solutions</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Machine Learning, Deep Learning, NLP, and custom Generative AI tools to automate complex tasks.</p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">OpenAI</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">LangChain</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">PyTorch</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                        <i data-lucide="cloud" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Cloud Infrastructure & DevOps</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">AWS, Azure, and Google Cloud optimization, CI/CD pipelines, containerization, and serverless architectures.</p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Docker</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Kubernetes</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">AWS</span>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600/10 text-amber-400 flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-all">
+                        <i data-lucide="check-circle-2" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Automation & QA Testing</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Enterprise automated UI, API, and performance testing frameworks utilizing TestNG, Cucumber, and Selenium.</p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Selenium</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">RestAssured</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Cucumber</span>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-600/10 text-rose-400 flex items-center justify-center mb-6 group-hover:bg-rose-600 group-hover:text-white transition-all">
+                        <i data-lucide="smartphone" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Mobile & Cross-Platform</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Native and cross-platform Android and iOS app development for seamless mobile user experiences.</p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Flutter</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Android</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">React Native</span>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-600/10 text-cyan-400 flex items-center justify-center mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                        <i data-lucide="database" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Data Engineering & Analytics</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Enterprise database architecture, ETL workflows, Power BI dashboards, and actionable business intelligence.</p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">Power BI</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">PostgreSQL</span>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-navy-900/40 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Why Choose ZS Private Limited</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Built for High Performance & Quality Assurance</h3>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 glass rounded-xl border border-slate-800">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-blue-400 mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">Industry Experts</h4>
+                    <p class="text-sm text-slate-400">Senior architects with deep technical experience leading every delivery pipeline.</p>
+                </div>
+                <div class="p-6 glass rounded-xl border border-slate-800">
+                    <i data-lucide="zap" class="w-8 h-8 text-gold-400 mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">Fast & Scalable</h4>
+                    <p class="text-sm text-slate-400">Agile delivery cycles backed by robust, scalable microservices architectures.</p>
+                </div>
+                <div class="p-6 glass rounded-xl border border-slate-800">
+                    <i data-lucide="clock" class="w-8 h-8 text-emerald-400 mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">24/7 Technical Support</h4>
+                    <p class="text-sm text-slate-400">Continuous monitoring, website maintenance, and infrastructure management.</p>
+                </div>
+                <div class="p-6 glass rounded-xl border border-slate-800">
+                    <i data-lucide="graduation-cap" class="w-8 h-8 text-purple-400 mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">Student & Enterprise Friendly</h4>
+                    <p class="text-sm text-slate-400">Flexible commercial models for businesses alongside mentored live projects for talent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Stack -->
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Modern Tech Stack</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Powered by Cutting-Edge Tools & Frameworks</h3>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
+                <!-- Stack badges -->
+                <script>
+                    const techs = ['Java', 'Python', 'Spring Boot', 'React', 'Angular', 'Next.js', 'Node.js', 'Express', 'Flutter', 'Android', 'MongoDB', 'MySQL', 'PostgreSQL', 'Firebase', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub', 'AWS', 'Azure', 'Google Cloud', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'Selenium', 'Playwright', 'REST Assured', 'TestNG', 'Cucumber', 'Power BI', 'Tableau', 'Linux'];
+                    document.write(techs.map(t => `<span class="px-4 py-2 glass rounded-lg text-xs font-semibold text-slate-300 border border-slate-800 hover:border-blue-500/50 hover:text-white transition-all cursor-default">${t}</span>`).join(''));
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Projects -->
+    <section id="projects" class="py-24 bg-navy-900/60 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Featured Projects</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Delivered Solutions & Case Studies</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 group">
+                    <div class="h-48 bg-slate-900 relative flex items-center justify-center p-6 border-b border-slate-800">
+                        <svg class="w-full h-full text-blue-500/30" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="150" fill="#0B132B"/>
+                            <path d="M20 120 L80 60 L140 90 L200 30 L280 100" stroke="#2563EB" stroke-width="4"/>
+                            <rect x="30" y="30" width="80" height="40" rx="6" fill="#1E293B"/>
+                        </svg>
+                        <span class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-blue-600/30 text-blue-300 rounded-full border border-blue-500/30">Enterprise</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">Hospital Management System</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">Automated patient scheduling, electronic health records, and billing infrastructure.</p>
+                        <span class="text-[11px] text-blue-400 font-semibold">Spring Boot • React • PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 group">
+                    <div class="h-48 bg-slate-900 relative flex items-center justify-center p-6 border-b border-slate-800">
+                        <svg class="w-full h-full text-purple-500/30" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="150" fill="#0B132B"/>
+                            <circle cx="150" cy="75" r="45" fill="#1E293B" stroke="#9333EA" stroke-width="3"/>
+                        </svg>
+                        <span class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full border border-purple-500/30">AI & NLP</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">AI Enterprise Chatbot</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">Multi-lingual customer support assistant integrated with state database schemes.</p>
+                        <span class="text-[11px] text-purple-400 font-semibold">Python • LangChain • OpenAI • Next.js</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 group">
+                    <div class="h-48 bg-slate-900 relative flex items-center justify-center p-6 border-b border-slate-800">
+                        <svg class="w-full h-full text-emerald-500/30" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="150" fill="#0B132B"/>
+                            <rect x="40" y="40" width="220" height="70" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+                        </svg>
+                        <span class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-emerald-600/30 text-emerald-300 rounded-full border border-emerald-500/30">Automation</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">E-Commerce Test Suite</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">Complete regression testing suite covering UI and payment gateway API endpoints.</p>
+                        <span class="text-[11px] text-emerald-400 font-semibold">Selenium • RestAssured • TestNG • Jenkins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internships" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Career Launchpad</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">Launch Your Career With Industry Experience</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        We offer structured, mentored internship programs designed for engineering students and graduates to work on real industry products using modern technology stacks.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-3 glass p-3 rounded-xl border border-slate-800">
+                            <i data-lucide="award" class="text-gold-400 w-5 h-5"></i>
+                            <span class="text-xs font-semibold text-slate-200">Verified Certificate</span>
+                        </div>
+                        <div class="flex items-center gap-3 glass p-3 rounded-xl border border-slate-800">
+                            <i data-lucide="code-2" class="text-blue-400 w-5 h-5"></i>
+                            <span class="text-xs font-semibold text-slate-200">Live Production Projects</span>
+                        </div>
+                        <div class="flex items-center gap-3 glass p-3 rounded-xl border border-slate-800">
+                            <i data-lucide="users" class="text-purple-400 w-5 h-5"></i>
+                            <span class="text-xs font-semibold text-slate-200">1-on-1 Mentorship</span>
+                        </div>
+                        <div class="flex items-center gap-3 glass p-3 rounded-xl border border-slate-800">
+                            <i data-lucide="briefcase" class="text-emerald-400 w-5 h-5"></i>
+                            <span class="text-xs font-semibold text-slate-200">Placement Assistance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Form -->
+                <div class="lg:col-span-6">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                            <i data-lucide="file-text" class="text-gold-400"></i> Apply For Internship
+                        </h3>
+                        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Application Submitted Successfully!');">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                                <input type="email" placeholder="Email Address" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <input type="tel" placeholder="Phone Number" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                                <input type="text" placeholder="College / University" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <select required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 text-xs focus:outline-none focus:border-royal-500">
+                                    <option value="">Domain Interested</option>
+                                    <option>Web Development</option>
+                                    <option>Automation Testing</option>
+                                    <option>AI & Machine Learning</option>
+                                    <option>Cloud & DevOps</option>
+                                </select>
+                                <input type="text" placeholder="Degree / Branch & Year" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                            </div>
+                            <input type="url" placeholder="LinkedIn Profile URL" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                            <button type="submit" class="w-full py-3.5 text-xs font-bold text-white bg-royal-600 hover:bg-royal-500 rounded-xl transition-all shadow-lg shadow-royal-600/30 uppercase tracking-wider">
+                                Submit Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-navy-900/60 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Client & Intern Reviews</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Trusted by Clients & Students Alike</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-gold-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-xs text-slate-300 italic mb-4">"ZS Private Limited delivered an amazing website that exceeded our expectations in performance and design."</p>
+                    <p class="text-xs font-bold text-white">— Rahul Sharma</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-gold-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-xs text-slate-300 italic mb-4">"Professional team, timely delivery, and excellent post-launch technical support."</p>
+                    <p class="text-xs font-bold text-white">— Sneha Patel</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-gold-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-xs text-slate-300 italic mb-4">"Our automation testing framework project was completed with outstanding quality and rigor."</p>
+                    <p class="text-xs font-bold text-white">— Akash Verma</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="text-gold-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-xs text-slate-300 italic mb-4">"Great internship experience! Working on live industry microservices boosted my technical confidence."</p>
+                    <p class="text-xs font-bold text-white">— Priya Singh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Got Questions?</h2>
+                <h3 class="text-3xl font-extrabold text-white">Frequently Asked Questions</h3>
+            </div>
+
+            <div class="space-y-4">
+                <details class="glass p-6 rounded-2xl border border-slate-800 cursor-pointer group">
+                    <summary class="text-sm font-bold text-white flex justify-between items-center">
+                        What services does ZS Private Limited provide?
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                        We specialize in custom web and mobile app development, AI solutions, cloud infrastructure, automation testing (Selenium/RestAssured), DevOps, and student technical internship programs.
+                    </p>
+                </details>
+
+                <details class="glass p-6 rounded-2xl border border-slate-800 cursor-pointer group">
+                    <summary class="text-sm font-bold text-white flex justify-between items-center">
+                        How long does a custom software project take?
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                        Timeline depends on project scope. Standard websites take 2–3 weeks, while enterprise software platforms and AI integration typically span 6–12 weeks using agile sprints.
+                    </p>
+                </details>
+
+                <details class="glass p-6 rounded-2xl border border-slate-800 cursor-pointer group">
+                    <summary class="text-sm font-bold text-white flex justify-between items-center">
+                        Do you offer student internships & live project mentorship?
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                        Yes! We provide hands-on training and mentorship on real production codebases for final year engineering student projects and domain internships.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiry -->
+    <section id="contact" class="py-24 bg-navy-900/80 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Get In Touch</h2>
+                        <h3 class="text-3xl font-extrabold text-white">Let’s Start Your Next Digital Transformation</h3>
+                    </div>
+
+                    <div class="space-y-6 text-sm text-slate-300">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Address</h5>
+                                <p class="text-xs text-slate-400">Electronic City, Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Phone</h5>
+                                <p class="text-xs text-slate-400">+91 8275994506</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Email</h5>
+                                <p class="text-xs text-slate-400">supportzspvtltd@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-6">Business Project Inquiry</h4>
+                        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully!');">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                                <input type="text" placeholder="Company Name" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <input type="email" placeholder="Email Address" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                                <input type="tel" placeholder="Phone Number" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500">
+                            </div>
+                            <textarea rows="4" placeholder="Project Description & Scope" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-xs focus:outline-none focus:border-royal-500"></textarea>
+                            <button type="submit" class="w-full py-3.5 text-xs font-bold text-white bg-royal-600 hover:bg-royal-500 rounded-xl transition-all shadow-lg shadow-royal-600/30 uppercase tracking-wider">
+                                Send Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-navy-950 border-t border-slate-800 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpeg" alt="ZS Logo" class="h-8 w-auto bg-white p-1 rounded">
+                <span class="text-white font-bold text-sm">ZS Private Limited</span>
+            </div>
+            <p>© 2026 ZS Private Limited. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace('+', '');
+                const inc = target / speed;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc) + '+';
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+            updateCount();
+        });
+    </script>
+</body>
+</html>
